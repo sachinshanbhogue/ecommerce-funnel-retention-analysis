@@ -27,6 +27,12 @@ To analyze user behavior in an e-commerce platform by evaluating the conversion 
 
 ---
 
+## 🛠 Tools & Technologies
+- **SQL Server** – data cleaning, transformation, and analysis  
+- **Power BI** – visualization and dashboarding  
+- **GitHub** – version control and project documentation  
+
+---
 ## 🧹 Data Cleaning & Preparation
 The following steps were performed using SQL:
 - Removed duplicate event records using window functions
@@ -39,7 +45,9 @@ The following steps were performed using SQL:
 ## 🔍 Analysis Performed
 
 ### 1️⃣ Conversion Funnel Analysis
-Analyzed how users progress through key funnel stages:
+Analyzed how users progress through key funnel stages at two levels:
+
+**Level 1: Overall Funnel**
 - Product View
 - Add to Cart
 - Purchase
@@ -47,21 +55,21 @@ Analyzed how users progress through key funnel stages:
 Metrics calculated:
 - Funnel counts at each stage
 - Conversion rates between stages
-- Drop-off volumes at each stage
+- Absolute drop-off volumes between stages
 
----
+This level helped identify where the largest user drop-off occurs in the overall journey.
 
-### 2️⃣ Category-Level Conversion Analysis
-To understand what drives purchases:
-- Calculated purchase conversion rates by product category
-- Focused on top-performing categories by conversion rate
-- Compared high-involvement products vs accessories/components
+**Level 2: Funnel Deep-Dive**
+To better understand user behavior within the funnel, additional breakdowns were performed:
+- Hour-of-day analysis of views and purchases to observe intra-day activity patterns
+- Product category-level funnel performance to compare high- vs low-converting categories
+- Time-to-purchase analysis to estimate decision latency between first view and first purchase
 
 This analysis helps explain aggregate funnel drop-offs.
 
 ---
 
-### 3️⃣ Customer Retention Analysis
+### 2️⃣ Customer Retention Analysis
 Measured short-term repeat purchase behavior:
 - Identified first purchase date per user
 - Calculated repeat purchases within:
@@ -105,13 +113,12 @@ This analysis focuses on **early retention**, not lifetime loyalty.
   - Tailor product page experiences based on purchase intent
 
 ---
+## 📊 Project Presentation
 
-## 🛠 Tools & Technologies
-- **SQL Server** – data cleaning, transformation, and analysis  
-- **Power BI** – visualization and dashboarding  
-- **GitHub** – version control and project documentation  
+A detailed walkthrough of the analysis, visuals, and business insights is available in the presentation below:
 
----
+📄 **[Download Project Presentation (PDF)](presentation/Funnel_Retention_Analysis.pdf)**
+
 
 ## 📑 Project Assets
 - SQL scripts: `/sql`

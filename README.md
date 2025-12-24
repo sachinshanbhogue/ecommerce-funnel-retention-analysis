@@ -1,2 +1,127 @@
-# ecommerce-funnel-retention-analysis
-SQL-based analysis of e-commerce user behavior covering conversion funnel, category-level conversion rates, and short-term customer retention using transactional event data.
+# 🛒 E-commerce Funnel & Retention Analysis (SQL)
+
+## 📌 Project Overview
+This project analyzes **user behavior on an e-commerce platform** using event-level data to understand how users move from product views to purchases, identify where major drop-offs occur, and evaluate short-term customer retention after the first purchase.
+
+The analysis focuses on:
+- Conversion funnel efficiency  
+- Product category-level conversion behavior  
+- Short-term customer retention (7-day and 30-day)
+
+All analysis was performed using **SQL**, with results visualized in **Power BI**.
+
+---
+
+## 🎯 Project Objective
+To analyze user behavior in an e-commerce platform by evaluating the conversion funnel, identifying category-level purchase patterns, and measuring short-term customer retention, in order to uncover key drop-off points and actionable opportunities to improve conversions and early repeat purchases.
+
+---
+
+## 📂 Dataset
+- **Source:** Public e-commerce event dataset  
+- **Granularity:** Event-level (view, cart, purchase)
+- **Key Fields:**  
+  `user_id`, `event_time`, `event_type`, `product_id`, `category_code`, `price`, `user_session`
+
+> Note: The dataset does not include geographic or marketing channel information. All insights are derived strictly from observed user behavior.
+
+---
+
+## 🧹 Data Cleaning & Preparation
+The following steps were performed using SQL:
+- Removed duplicate event records using window functions
+- Converted event timestamps into SQL datetime format
+- Handled missing values (notably in category fields)
+- Created a cleaned events table for downstream analysis
+
+---
+
+## 🔍 Analysis Performed
+
+### 1️⃣ Conversion Funnel Analysis
+Analyzed how users progress through key funnel stages:
+- Product View
+- Add to Cart
+- Purchase
+
+Metrics calculated:
+- Funnel counts at each stage
+- Conversion rates between stages
+- Drop-off volumes at each stage
+
+---
+
+### 2️⃣ Category-Level Conversion Analysis
+To understand what drives purchases:
+- Calculated purchase conversion rates by product category
+- Focused on top-performing categories by conversion rate
+- Compared high-involvement products vs accessories/components
+
+This analysis helps explain aggregate funnel drop-offs.
+
+---
+
+### 3️⃣ Customer Retention Analysis
+Measured short-term repeat purchase behavior:
+- Identified first purchase date per user
+- Calculated repeat purchases within:
+  - 7 days
+  - 30 days
+- Derived retention rates within the observed time window
+
+This analysis focuses on **early retention**, not lifetime loyalty.
+
+---
+
+## 📊 Key Visualizations
+
+### User Conversion Funnel
+![User Conversion Funnel](visuals/funnel_chart.png)
+
+### Top Product Categories by Purchase Conversion Rate
+![Category Conversion Rates](visuals/category_conversion.png)
+
+### Customer Retention Breakdown (7-Day vs 30-Day)
+![Customer Retention Breakdown](visuals/retention_breakdown.png)
+
+---
+
+## 📈 Key Insights
+- The **largest user drop-off occurs before the cart stage**, with only ~9% of viewers adding items to cart.
+- Once users add items to cart, **conversion to purchase is strong (~58%)**, indicating an efficient checkout flow.
+- Product categories show **significant variation in conversion rates**, with accessories and components converting better than high-involvement products.
+- Average time to purchase is approximately **37 hours**, suggesting comparison-driven decision-making.
+- **Short-term retention is time-sensitive**:
+  - ~33% of buyers return within 7 days.
+  - Very limited additional repeat behavior occurs between days 8–30.
+
+---
+
+## 💡 Business Recommendations
+- Improve **pre-cart engagement** (product content, comparisons, trust signals) to reduce early funnel drop-offs.
+- Focus on **early post-purchase engagement within the first 7 days** to increase repeat purchases.
+- Use category-level insights to:
+  - Promote high-conversion accessories alongside high-involvement products
+  - Tailor product page experiences based on purchase intent
+
+---
+
+## 🛠 Tools & Technologies
+- **SQL Server** – data cleaning, transformation, and analysis  
+- **Power BI** – visualization and dashboarding  
+- **GitHub** – version control and project documentation  
+
+---
+
+## 📑 Project Assets
+- SQL scripts: `/sql`
+- Dataset: `/data`
+- Visualizations: `/visuals`
+- Presentation summary: `/presentation`
+
+---
+
+## 📌 Notes
+- All insights are based on the available data and defined observation windows.
+- The analysis does not assume user location, time zone, or marketing attribution.
+

@@ -23,7 +23,6 @@ To analyze user behavior in an e-commerce platform by evaluating the conversion 
 - **Key Fields:**  
   `user_id`, `event_time`, `event_type`, `product_id`, `category_code`, `price`, `user_session`
 
-> Note: The dataset does not include geographic or marketing channel information. All insights are derived strictly from observed user behavior.
 
 ---
 

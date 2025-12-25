@@ -117,7 +117,7 @@ This analysis focuses on **early retention**, not lifetime loyalty.
 
 A detailed walkthrough of the analysis, visuals, and business insights is available in the presentation below:
 
-📄 **[Download Project Presentation (PDF)](presentation/Funnel_Retention_Analysis.pdf)**
+📄 **[Download Project Presentation (PDF)](presentation/ecommerce_analysis.pdf)**
 
 
 ## 📑 Project Assets

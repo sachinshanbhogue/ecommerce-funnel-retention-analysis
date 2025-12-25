@@ -84,13 +84,13 @@ This analysis focuses on **early retention**, not lifetime loyalty.
 ## 📊 Key Visualizations
 
 ### User Conversion Funnel
-![User Conversion Funnel](visuals/funnel_chart.png)
+![User Conversion Funnel](visuals/funnel.png)
 
 ### Top Product Categories by Purchase Conversion Rate
 ![Category Conversion Rates](visuals/category_conversion.png)
 
 ### Customer Retention Breakdown (7-Day vs 30-Day)
-![Customer Retention Breakdown](visuals/retention_breakdown.png)
+![Customer Retention Breakdown](visuals/retention.png)
 
 ---
 
